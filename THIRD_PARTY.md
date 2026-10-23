@@ -20,7 +20,7 @@ Open Semantic Interchange
 Copyright 2026 - Open Semantic Interchange
 ```
 
-The upstream tag also contains `LICENSE-Docs`, the Creative Commons Attribution 4.0 International license. It covers the documentation under that license (for example `core-spec/spec.md`). It is not stated here that this license applies to `osi-schema.json`, which is covered by the Apache License 2.0 above.
+The upstream tag `osi-0.1.1-rc1` (a release candidate, not a final version) also contains [`LICENSE-Docs`](https://github.com/apache/ossie/blob/osi-0.1.1-rc1/LICENSE-Docs), the Creative Commons Attribution 4.0 International license. The upstream README states that the specification and documentation are licensed under CC BY 4.0, for example `core-spec/spec.md`. `LICENSE-Docs` is cited here as the licensing reference for the upstream specification and documentation. No upstream documentation file is intentionally redistributed as part of this repository; however, the licensing status of any potentially adapted material in `ossie-0.1.1.md` has not been conclusively determined. It is not stated here that this license applies to `osi-schema.json`, which is covered by the Apache License 2.0 above.
 
 The file `.github/skills/semantic-contract-authoring/references/ossie-0.1.1.md` is a summary written for this project and references the same upstream tag. It contains no verbatim passages from `core-spec/spec.md` (no 8-word sequence in common was found). It was not otherwise compared line by line.
 
@@ -28,4 +28,4 @@ The file `.github/skills/semantic-contract-authoring/references/ossie-0.1.1.md` 
 
 Everything in this repository other than the third-party files listed above is original content of this project, licensed under the MIT License (see [LICENSE](LICENSE)).
 
-The MIT License for the project's original content does not replace, remove or alter the conditions that apply to the third-party components above. Those components remain under their own licenses (Apache License 2.0 for `osi-schema.json`, and Creative Commons Attribution 4.0 for the upstream documentation covered by `LICENSE-Docs`), and their notices must be kept when redistributed.
+The MIT License for the project's original content does not replace, remove or alter the conditions that apply to the third-party components above. Those components remain under their own licenses: Apache License 2.0 for `osi-schema.json`, which is included in this repository, and Creative Commons Attribution 4.0 for the upstream documentation referenced above, which is not included in this repository. The notices of the Apache component must be kept when it is redistributed.
