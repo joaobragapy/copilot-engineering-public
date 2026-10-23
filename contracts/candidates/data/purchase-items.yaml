@@ -1,0 +1,44 @@
+apiVersion: v3.2.0
+kind: DataContract
+id: purchase-items
+name: Purchase Items
+version: 0.1.0
+status: draft
+
+description:
+  purpose: Provide purchase item records for analytical consumption.
+  limitations: >
+    Producer: procurement-api.
+    Record grain is one purchase item returned by the source API.
+    The source has not confirmed any primary key, uniqueness constraint, or identity rule for item_id or purchase_id.
+    All fields may be null; null handling and business meaning of nulls have not been confirmed.
+    The precision and scale of quantity have not been specified.
+    SLA, retention, security classification, and ownership have not been specified (TODO).
+
+servers: []
+
+schema:
+  - name: purchase_item
+    description: >
+      One purchase item returned by the procurement-api source API.
+    logicalType: object
+    properties:
+      - name: purchase_id
+        description: Identifier of the purchase, as provided by the source.
+        logicalType: integer
+        required: false
+
+      - name: item_id
+        description: Identifier of the item within the source, as provided by the source. Uniqueness is not confirmed.
+        logicalType: integer
+        required: false
+
+      - name: item_description
+        description: Description of the item, as supplied by the source.
+        logicalType: string
+        required: false
+
+      - name: quantity
+        description: Quantity reported by the source. The source type is decimal; precision and scale are not specified.
+        logicalType: number
+        required: false

@@ -1,0 +1,42 @@
+apiVersion: v3.2.0
+kind: DataContract
+id: sales-orders-test-fixture
+name: Sales Orders (Synthetic Test Fixture)
+version: 0.1.0
+status: draft
+
+description:
+  purpose: >
+    Synthetic ODCS fixture for testing the semantic-contract-authoring skill.
+    Test use only.
+  limitations: >
+    This is a synthetic test fixture. It is not an approved production contract and
+    no producer has approved or confirmed these definitions.
+    Record grain is one record per order.
+    No uniqueness constraint, primary key, or identity rule for order_id has been declared.
+    Null handling has not been specified.
+    Sales channel values, order date semantics, filtering rules, SLA, retention,
+    security classification, and ownership have not been specified (TODO).
+
+servers: []
+
+schema:
+  - name: sales_order
+    description: >
+      One sales order record (synthetic test data definition). The grain is one record per order.
+    logicalType: object
+    properties:
+      - name: order_id
+        description: Order identifier (synthetic test data definition).
+        logicalType: string
+        required: false
+
+      - name: order_date
+        description: Date the order was placed (synthetic test data definition).
+        logicalType: date
+        required: false
+
+      - name: sales_channel
+        description: Sales channel through which the order was placed (synthetic test data definition).
+        logicalType: string
+        required: false

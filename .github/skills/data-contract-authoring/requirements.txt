@@ -1,0 +1,4 @@
+# Validação de contratos de dados (ODCS 3.2.0).
+# Não é necessário para o uso normal da skill, que apenas gera e revisa YAML.
+# Versão do baseline definida em standards/architecture/initial-architecture.md.
+datacontract-cli==1.2.7

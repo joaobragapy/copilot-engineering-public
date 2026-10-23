@@ -1,0 +1,21 @@
+version: "0.1.1"
+
+semantic_model:
+  - name: "REPLACE_WITH_SEMANTIC_MODEL_NAME"
+    description: "REPLACE_WITH_APPROVED_DESCRIPTION"
+
+    datasets:
+      - name: "REPLACE_WITH_DATASET_NAME"
+        source: "REPLACE_WITH_PHYSICAL_TABLE_OR_QUERY"
+        description: "REPLACE_WITH_APPROVED_DESCRIPTION"
+
+        fields:
+          - name: "REPLACE_WITH_FIELD_NAME"
+            description: "REPLACE_WITH_APPROVED_DESCRIPTION"
+            expression:
+              dialects:
+                - dialect: "ANSI_SQL"
+                  expression: "REPLACE_WITH_APPROVED_SQL_EXPRESSION"
+
+    relationships: []
+    metrics: []

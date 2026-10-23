@@ -1,0 +1,11 @@
+# Dependências do validador OSSIE (validation/validate.py, commit faf581054dcf7964d5fe0ceae7d6f415c8ce32a5).
+# O commit não publica arquivo oficial de dependências; o próprio validador indica "pip install pyyaml jsonschema".
+# Não é necessário para o uso normal da skill.
+#
+# Oficiais (exigidas pelo validador):
+PyYAML==6.0.3
+jsonschema==4.26.0
+#
+# Versão de referência do projeto (ambiente das avaliações). O validador usa sqlglot
+# opcionalmente; sem ele, a validação SQL é ignorada silenciosamente.
+sqlglot==30.24.0

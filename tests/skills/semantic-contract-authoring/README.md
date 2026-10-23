@@ -1,0 +1,7 @@
+# Tests — semantic-contract-authoring
+
+These cases test the skill's decision-making and reporting, not only whether it emits YAML. Use the locally pinned Ossie 0.1.1 schema for structural validation. The local schema was copied from the official `release/0.1.1` tag. Do not use schemas from other versions.
+
+For each run, record `PASS`, `FAIL`, or `NOT RUN`, the prompt, inputs, exact validator command/version if executed, actual result, and observed deviations. Do not mark validation `PASS` if no validator was run.
+
+The Ossie 0.1.1 starting template is at `.github/skills/semantic-contract-authoring/templates/semantic-contract.yaml`. It contains `REPLACE_WITH_...` placeholders and is not an approved contract. The authoritative structure is the pinned schema in `.github/skills/semantic-contract-authoring/references/osi-schema.json`. The template's compatibility with that schema was checked by inspection and then validated structurally with the official OSSIE validator in Etapa 14 (PASS, exit code 0). That structural PASS does not make the template approved or semantically complete; its placeholders and `ANSI_SQL` value remain unconfirmed. Any illustrative values in examples are not approved semantic decisions. Do not use the current `main` branch's 0.2.0.dev0 schema.

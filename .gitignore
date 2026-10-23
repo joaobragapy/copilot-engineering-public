@@ -1,0 +1,27 @@
+# Python: virtual environments
+.venv/
+venv/
+env/
+ENV/
+.venv-*/
+
+# Python: cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python: test and tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Local input data files (any format, domain, or source)
+data/input/

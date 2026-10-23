@@ -1,0 +1,187 @@
+apiVersion: v3.2.0
+kind: DataContract
+id: compras-gov-material-price-records
+name: Public Procurement Material Price Records
+version: 1.0.0
+status: draft
+domain: public-procurement
+
+description:
+  purpose: Provide public procurement material price records for analytical use.
+  limitations: >
+    Field semantics and business constraints have not been fully verified.
+    Record grain and primary key are not yet confirmed.
+    Field types and nullability should be validated against additional source records.
+
+servers: []
+
+schema:
+  - name: material_price_record
+    description: >
+      A record returned by the Compras.gov.br material price research API.
+      The precise business grain remains to be confirmed.
+    logicalType: object
+    properties:
+      - name: idCompra
+        description: Purchase identifier as provided by the source.
+        logicalType: integer
+
+      - name: dataCompra
+        description: Purchase date as provided by the source.
+        logicalType: date
+
+      - name: forma
+        description: Purchase form code or label.
+        logicalType: string
+
+      - name: modalidade
+        description: Purchase modality code.
+        logicalType: integer
+
+      - name: dataHoraAtualizacaoCompra
+        description: Source-provided purchase update date and time.
+        logicalType: timestamp
+
+      - name: idItemCompra
+        description: Numeric item identifier as provided by the source.
+        logicalType: integer
+
+      - name: numeroItemCompra
+        description: Item number within the purchase, according to the source.
+        logicalType: integer
+
+      - name: niFornecedor
+        description: Supplier identification number, preserved as text.
+        logicalType: string
+
+      - name: codigoItemCatalogo
+        description: Catalog item code.
+        logicalType: integer
+
+      - name: quantidade
+        description: Quantity reported for the item.
+        logicalType: number
+
+      - name: precoUnitario
+        description: Unit price reported for the item.
+        logicalType: number
+
+      - name: descricaoItem
+        description: Source-provided item description.
+        logicalType: string
+
+      - name: siglaUnidadeFornecimento
+        description: Abbreviation of the supply unit.
+        logicalType: string
+
+      - name: nomeUnidadeFornecimento
+        description: Name of the supply unit.
+        logicalType: string
+
+      - name: capacidadeUnidadeFornecimento
+        description: Capacity associated with the supply unit; business meaning requires confirmation.
+        logicalType: number
+
+      - name: siglaUnidadeMedida
+        description: Abbreviation of the measurement unit, when provided.
+        logicalType: string
+
+      - name: nomeUnidadeMedida
+        description: Name of the measurement unit, when provided.
+        logicalType: string
+
+      - name: criterioJulgamento
+        description: Source-provided judgment criterion code.
+        logicalType: string
+
+      - name: percentualMaiorDesconto
+        description: Greater-discount percentage reported by the source.
+        logicalType: number
+
+      - name: nomeFornecedor
+        description: Supplier name as provided by the source.
+        logicalType: string
+
+      - name: marca
+        description: Item brand as provided by the source.
+        logicalType: string
+
+      - name: dataResultado
+        description: Date associated with the result, according to the source.
+        logicalType: date
+
+      - name: dataHoraAtualizacaoItem
+        description: Source-provided item update date and time.
+        logicalType: timestamp
+
+      - name: codigoUasg
+        description: UASG code, preserved as text.
+        logicalType: string
+
+      - name: nomeUasg
+        description: UASG name as provided by the source.
+        logicalType: string
+
+      - name: codigoOrgao
+        description: Organization code.
+        logicalType: integer
+
+      - name: nomeOrgao
+        description: Organization name as provided by the source.
+        logicalType: string
+
+      - name: estado
+        description: State abbreviation as provided by the source.
+        logicalType: string
+
+      - name: codigoMunicipio
+        description: Municipality code.
+        logicalType: integer
+
+      - name: municipio
+        description: Municipality name as provided by the source.
+        logicalType: string
+
+      - name: poder
+        description: Government power code.
+        logicalType: string
+
+      - name: esfera
+        description: Government sphere code.
+        logicalType: string
+
+      - name: dataHoraAtualizacaoUasg
+        description: Source-provided UASG update date and time.
+        logicalType: timestamp
+
+      - name: codigoClasse
+        description: Catalog class code.
+        logicalType: integer
+
+      - name: nomeClasse
+        description: Catalog class name.
+        logicalType: string
+
+      - name: idCompraItem
+        description: Purchase item identifier as provided by the source.
+        logicalType: string
+
+      - name: objetoCompra
+        description: Purchase object description.
+        logicalType: string
+
+      - name: descricaoDetalhadaItem
+        description: Detailed item description as provided by the source.
+        logicalType: string
+
+      - name: dataAtualizacaoFato
+        description: Source-provided fact update date and time; exact semantics require confirmation.
+        logicalType: timestamp
+
+      - name: codigoPdm
+        description: PDM code, preserved as text.
+        logicalType: string
+
+      - name: nomePdm
+        description: PDM name as provided by the source.
+        logicalType: string
